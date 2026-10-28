@@ -1,0 +1,358 @@
+{
+  "species": [
+    {
+      "id": "jerboa",
+      "slug": "long-eared-jerboa",
+      "name": "Long-eared Jerboa",
+      "scientific": "Euchoreutes naso",
+      "family": "Dipodidae",
+      "status": "Endangered",
+      "population": "Unknown",
+      "size": "9–11 cm",
+      "habitat": "Gobi Desert",
+      "biome": "Desert",
+      "emoji": "🐭",
+      "color": "sand",
+      "location": "Gobi Desert",
+      "published": true,
+      "diary": [
+        {
+          "id": "jerboa-supplied",
+          "title": "Field observation",
+          "date": "From the original field journal",
+          "body": "Observed foraging near saxaul shrubs under twilight in the South Gobi. Exceptionally long auditory bullae help detect subterranean beetle activity.",
+          "example": true,
+          "source": "supplied-html-2026-10-28"
+        },
+        {
+          "date": "12 Oct 2026",
+          "title": "A quiet night under the saxaul",
+          "body": "At dusk, the long-eared jerboa emerged from the edge of the dune field. Its enormous ears turned toward every small sound while it moved between shrubs. The night was cold, but the sand still held the day’s heat.\n\n> Look closely. Leave quietly.",
+          "id": "jerboa-0",
+          "example": true
+        },
+        {
+          "date": "18 Oct 2026",
+          "title": "Tracks in the dry wash",
+          "body": "Fresh tracks crossed the dry wash before sunrise. We recorded the route without approaching the burrow, leaving the animal’s routine undisturbed.",
+          "id": "jerboa-1",
+          "example": true
+        }
+      ],
+      "latitude": 43,
+      "longitude": 102,
+      "image": "assets/storybook/jerboa-painted.png",
+      "summary": "Observed foraging near saxaul shrubs under twilight in the South Gobi. Exceptionally long auditory bullae help detect subterranean beetle activity.",
+      "factNote": "Illustrative profile from the original prototype. Conservation assessments and population estimates need an editorial source review before publication.",
+      "archived": false,
+      "example": false
+    },
+    {
+      "id": "saiga",
+      "slug": "saiga-antelope",
+      "name": "Saiga Antelope",
+      "scientific": "Saiga tatarica",
+      "family": "Bovidae",
+      "status": "Critically Endangered",
+      "population": "~124,000",
+      "size": "1.0–1.4 m",
+      "habitat": "Eurasian Steppe",
+      "biome": "Grassland",
+      "emoji": "🦌",
+      "color": "ochre",
+      "location": "Kazakhstan Steppe",
+      "published": true,
+      "diary": [
+        {
+          "id": "saiga-supplied",
+          "title": "Field observation",
+          "date": "From the original field journal",
+          "body": "Noticed a herd migrating across arid semi-deserts. Their signature proboscis filters dust during dry summer storms.",
+          "example": true,
+          "source": "supplied-html-2026-10-28"
+        },
+        {
+          "date": "06 Sep 2026",
+          "title": "A herd on the move",
+          "body": "The herd moved across the pale steppe in a loose line, stopping whenever the wind shifted. Their distinctive noses filter dust during the dry season.",
+          "id": "saiga-0",
+          "example": true
+        }
+      ],
+      "latitude": 48,
+      "longitude": 65,
+      "image": "assets/storybook/saiga-painted.png",
+      "summary": "Noticed a herd migrating across arid semi-deserts. Their signature proboscis filters dust during dry summer storms.",
+      "factNote": "Illustrative profile from the original prototype. Conservation assessments and population estimates need an editorial source review before publication."
+    },
+    {
+      "id": "kakapo",
+      "slug": "kakapo",
+      "name": "Kakapo Parrot",
+      "scientific": "Strigops habroptilus",
+      "family": "Strigopidae",
+      "status": "Critically Endangered",
+      "population": "~250",
+      "size": "58–64 cm",
+      "habitat": "New Zealand",
+      "biome": "Rainforest",
+      "emoji": "🦜",
+      "color": "leaf",
+      "location": "New Zealand",
+      "published": true,
+      "diary": [
+        {
+          "id": "kakapo-supplied",
+          "title": "Field observation",
+          "date": "From the original field journal",
+          "body": "Heard resonant booming calls echoing through the podocarp rainforest canopy during the nocturnal lek mating season.",
+          "example": true,
+          "source": "supplied-html-2026-10-28"
+        },
+        {
+          "date": "22 Aug 2026",
+          "title": "Booming in the podocarp forest",
+          "body": "A low booming call travelled through the trees after sunset. The sanctuary team checked cameras from a distance and logged the call without interrupting the birds.",
+          "id": "kakapo-0",
+          "example": true
+        }
+      ],
+      "latitude": -45,
+      "longitude": 168,
+      "image": "assets/storybook/kakapo-painted.png",
+      "summary": "Heard resonant booming calls echoing through the podocarp rainforest canopy during the nocturnal lek mating season.",
+      "factNote": "Illustrative profile from the original prototype. Conservation assessments and population estimates need an editorial source review before publication."
+    },
+    {
+      "id": "leopard",
+      "slug": "amur-leopard",
+      "name": "Amur Leopard",
+      "scientific": "Panthera pardus orientalis",
+      "family": "Felidae",
+      "status": "Critically Endangered",
+      "population": "~120 adults",
+      "size": "90–136 cm",
+      "habitat": "Temperate Forest",
+      "biome": "Taiga",
+      "emoji": "🐆",
+      "color": "moss",
+      "location": "Siberian Taiga",
+      "published": true,
+      "diary": [
+        {
+          "id": "leopard-supplied",
+          "title": "Field observation",
+          "date": "From the original field journal",
+          "body": "Spotted fresh paw prints near snow-dusted pine ridges. Thick winter coat provides perfect camouflage in the temperate taiga.",
+          "example": true,
+          "source": "supplied-html-2026-10-28"
+        },
+        {
+          "date": "08 Oct 2026",
+          "title": "Pawprints after the first snow",
+          "body": "The first snow revealed a line of prints along the pine ridge. We marked the route on the public map at a broad regional level to protect the den site.",
+          "id": "leopard-0",
+          "example": true
+        }
+      ],
+      "latitude": 44,
+      "longitude": 133,
+      "image": "assets/storybook/leopard-painted.png",
+      "summary": "Spotted fresh paw prints near snow-dusted pine ridges. Thick winter coat provides perfect camouflage in the temperate taiga.",
+      "factNote": "Illustrative profile from the original prototype. Conservation assessments and population estimates need an editorial source review before publication."
+    },
+    {
+      "id": "gorilla",
+      "slug": "mountain-gorilla",
+      "name": "Mountain Gorilla",
+      "scientific": "Gorilla beringei beringei",
+      "family": "Hominidae",
+      "status": "Endangered",
+      "population": "~1,000",
+      "size": "1.4–1.8 m",
+      "habitat": "Virunga Massif",
+      "biome": "Rainforest",
+      "emoji": "🦍",
+      "color": "forest",
+      "location": "Virunga Massif",
+      "published": true,
+      "diary": [
+        {
+          "id": "gorilla-supplied",
+          "title": "Field observation",
+          "date": "From the original field journal",
+          "body": "Observed silverback leading family group through misty bamboo forest feeding on tender pith and wild celery.",
+          "example": true,
+          "source": "supplied-html-2026-10-28"
+        },
+        {
+          "date": "03 Jul 2026",
+          "title": "Mist over the bamboo",
+          "body": "A silverback led the group through a corridor of bamboo. The observation was made from the approved distance, with the team recording behaviour and weather only.",
+          "id": "gorilla-0",
+          "example": true
+        }
+      ],
+      "latitude": -1,
+      "longitude": 29,
+      "image": "assets/storybook/gorilla-painted.png",
+      "summary": "Observed silverback leading family group through misty bamboo forest feeding on tender pith and wild celery.",
+      "factNote": "Illustrative profile from the original prototype. Conservation assessments and population estimates need an editorial source review before publication."
+    }
+  ],
+  "stories": [
+    {
+      "id": "story-0",
+      "title": "Gobi Night Patrol",
+      "location": "South Gobi Desert",
+      "author": "Community archive",
+      "body": "Spent two weeks assisting researchers with acoustic monitors in sand dune valleys. Witnessed wild jerboas leaping effortlessly across moonlight.",
+      "image": "assets/storybook/story-gobi.png",
+      "published": true,
+      "example": true
+    },
+    {
+      "id": "story-1",
+      "title": "Rainforest Canopy Watch",
+      "location": "Amazon Basin",
+      "author": "Community archive",
+      "body": "Helped set up camera traps and documented rare epiphytic orchids blooming high up in the tropical emergent layer.",
+      "image": "assets/storybook/story-canopy.png",
+      "published": true,
+      "example": true
+    },
+    {
+      "id": "story-2",
+      "title": "Steppe Conservation Camp",
+      "location": "Kazakhstan Steppe",
+      "author": "Community archive",
+      "body": "Engaged local pastoralists in sustainable grazing practices to protect vital calving grounds for endangered saiga antelopes.",
+      "image": "assets/storybook/story-steppe.png",
+      "published": true,
+      "example": true
+    }
+  ],
+  "events": [
+    {
+      "id": "event-0",
+      "title": "Long-eared Jerboa Night Tracking",
+      "body": "Join our field researchers in tracking nocturnal rodent burrow systems and recording acoustic vocalizations in southern Mongolia.",
+      "date": "15 Oct 2026",
+      "location": "Gobi Desert Camp",
+      "kind": "Field day",
+      "button": "RSVP Expedition",
+      "image": "assets/storybook/event-night.png",
+      "published": true,
+      "example": true
+    },
+    {
+      "id": "event-1",
+      "title": "Rainforest Bioacoustics 101",
+      "body": "An online masterclass on using automated recording units (ARUs) to detect endangered bird and mammal species in dense canopies.",
+      "date": "02 Nov 2026",
+      "location": "Virtual Webinar",
+      "kind": "Online lab",
+      "button": "Reserve Seat",
+      "image": "assets/storybook/event-sound.png",
+      "published": true,
+      "example": true
+    },
+    {
+      "id": "event-2",
+      "title": "Kakapo Habitat Restoration Day",
+      "body": "Hands-on sanctuary maintenance, predator-free fence checks, and native forest replanting for recovering parrot populations.",
+      "date": "10 Dec 2026",
+      "location": "Auckland, NZ",
+      "kind": "Community",
+      "button": "Join Volunteer Team",
+      "image": "assets/storybook/event-restoration.png",
+      "published": true,
+      "example": true
+    }
+  ],
+  "settings": {
+    "siteName": "LongEar Diaries",
+    "email": "hello@longeardiaries.local",
+    "tagline": "Small creatures. Big stories.",
+    "intro": "A little curiosity can change the way we care for our planet.",
+    "designVersion": "storybook-2026-10-28",
+    "showDemo": true
+  },
+  "members": [
+    {
+      "id": "demo-editor",
+      "name": "Demo Editor",
+      "email": "demo@longeardiaries.test",
+      "role": "admin",
+      "title": "Demo workspace editor",
+      "bio": "A public front-end demonstration account.",
+      "active": true,
+      "public": false,
+      "example": true
+    }
+  ],
+  "partners": [
+    {
+      "id": "partner-0",
+      "title": "Global Wildlife Fund",
+      "body": "Habitat Grant Sponsor",
+      "published": true,
+      "example": true
+    },
+    {
+      "id": "partner-1",
+      "title": "Desert Eco-Lab",
+      "body": "Telemetry Partner",
+      "published": true,
+      "example": true
+    },
+    {
+      "id": "partner-2",
+      "title": "Avian Sanctuary NZ",
+      "body": "Sanctuary Partner",
+      "published": true,
+      "example": true
+    },
+    {
+      "id": "partner-3",
+      "title": "Biodiversity DNA Inst.",
+      "body": "Genetic Archive",
+      "published": true,
+      "example": true
+    }
+  ],
+  "revision": 0,
+  "updatedAt": "2026-10-28T00:00:00Z",
+  "team": [
+    {
+      "id": "team-0",
+      "name": "Elena Rostova",
+      "title": "Lead Field Biologist & Founder",
+      "bio": "Passionate about desert rodent ecology and DNA preservation. Spent 3 years tracking nocturnal jerboas in Central Asia.",
+      "order": 1,
+      "public": true,
+      "example": true,
+      "image": ""
+    },
+    {
+      "id": "team-1",
+      "name": "Marcus Vance",
+      "title": "Eco-Cartographer & UI Designer",
+      "bio": "Combines vintage botanical art styles with modern interactive web architecture to bring endangered biomes to life.",
+      "order": 2,
+      "public": true,
+      "example": true,
+      "image": ""
+    },
+    {
+      "id": "team-2",
+      "name": "Dr. Lin Wei",
+      "title": "Conservation Ethics Advisor",
+      "bio": "Ensures all field expeditions adhere to strict non-invasive animal observation protocols and community benefit-sharing.",
+      "order": 3,
+      "public": true,
+      "example": true,
+      "image": ""
+    }
+  ]
+}

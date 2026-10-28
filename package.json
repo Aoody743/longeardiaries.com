@@ -1,0 +1,10 @@
+{
+  "name": "longear-diaries-sites",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/app.js && node --check src/demo-api.js && node --check src/globe.js && node --check src/globe-model.js && node --check src/painterly-material.js"
+  }
+}

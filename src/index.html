@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffddbc">
+  <meta name="description" content="LongEar Diaries — species field journals, conservation events and stories from our community.">
+  <title>LongEar Diaries</title>
+  <link rel="icon" href="assets/logo-reference.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="storybook.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="LongEar Diaries home"><img src="assets/logo-reference.jpg" alt=""><span>LongEar Diaries</span></a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#species" data-nav="species">Species Diaries</a><a href="#events" data-nav="events">Events</a><a href="#volunteer" data-nav="volunteer">Volunteer</a><a href="#team" data-nav="team">Our Team</a><a href="#about" data-nav="about">About Us</a><a href="#partner" data-nav="partner">Partner</a><a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <button class="menu-toggle icon-button" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </header>
+  <main id="main-content" tabindex="-1"><div id="app"><div class="loading-page">Opening the field journal…</div></div></main>
+  <footer class="footer simple-footer"><a href="#home" aria-label="LongEar Diaries home"><img src="assets/logo-reference.jpg" alt="LongEar Diaries"></a><p>© 2026 LongEar Diaries.</p></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script>window.LONGEAR_HOSTED_DEMO=true;</script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
