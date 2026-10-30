@@ -19,10 +19,16 @@ export function createPublicPages(ctx) {
 
   function home() {
     return `<section class="home-universe" aria-label="LongEar Diaries interactive world">
-      <a class="home-logo" href="#home" aria-label="LongEar Diaries home">${image('assets/logo-reference.jpg', 'LongEar Diaries', '', true)}</a>
-      <h1 class="home-title">LongEar Diaries</h1>
-      <div class="orbit-map">
-        <svg class="orbit-trails" viewBox="0 0 1000 720" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="500" cy="370" rx="335" ry="278"/><path d="M185 190Q500 60 815 190M165 430Q500 680 835 430"/></svg>
+      <header class="home-header">
+        <div class="home-brand">
+          <a class="home-logo" href="#home" aria-label="LongEar Diaries home">${image('assets/logo-reference.jpg', '', '', true)}</a>
+          <h1 class="home-title">LongEar Diaries</h1>
+        </div>
+        <nav class="home-navigation" aria-label="Explore LongEar Diaries">
+          ${destinations.map(([id, name, symbol, color]) => `<a class="home-nav-link tone-${color}" href="#${id}">${icon(symbol)}<span>${name}</span></a>`).join('')}
+        </nav>
+      </header>
+      <div class="home-world">
         <div class="world-stage solar-globe" id="worldStage">
           <div class="planet-canvas"><div class="world-loading" role="status"><span></span><span class="visually-hidden">Loading Earth</span></div></div>
           <div class="planet-markers"></div>
@@ -33,10 +39,8 @@ export function createPublicPages(ctx) {
             <button class="icon-button" data-world="reset" aria-label="Reset globe view">${icon('rotate')}</button>
           </div>
         </div>
-        <nav class="orbit-navigation" aria-label="Explore LongEar Diaries">
-          ${destinations.map(([id, name, symbol, color], index) => `<a class="orbit-link orbit-${id} tone-${color}" href="#${id}" style="--tilt:${[-3, -5, 4, -4, 5, 3, -3][index]}deg"><span class="orbit-token">${icon(symbol)}</span><span>${name}</span></a>`).join('')}
-        </nav>
       </div>
+      <p class="home-message">Every species deserves a chance to survive</p>
     </section>`;
   }
 
