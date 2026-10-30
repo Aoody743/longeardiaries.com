@@ -55,7 +55,7 @@ body:not([data-page])>.topbar,body:not([data-page])>.footer{visibility:hidden}
 .home-logo:hover{transform:rotate(-7deg)}
 .home-logo img{display:block;width:76px;height:76px;border-radius:50%;box-shadow:0 4px 12px #84613e22}
 .home-title{margin:0;font:700 23px/1.15 var(--serif);letter-spacing:-.025em;color:#59462e;text-align:center;white-space:nowrap}
-.home-navigation{display:flex;align-items:center;justify-content:safe center;gap:18px;min-width:0;width:100%;overflow-x:auto;padding:18px 8px 22px;scrollbar-width:thin;scrollbar-color:#a99569 transparent;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
+.home-navigation{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px;min-width:0;width:100%;padding:18px 8px 22px}
 .home-nav-link{flex:none;min-height:52px;display:flex;align-items:center;justify-content:center;gap:9px;padding:10px 16px;border:1.4px solid #8d7d52;border-radius:20px 14px 23px 14px;background:var(--tone);color:#51432f;font:700 20px/1.25 var(--serif);white-space:nowrap;box-shadow:0 4px 5px #87664124;transform:translateY(var(--lift,0px)) rotate(var(--tilt,-2deg));transition:transform .2s,background .2s,box-shadow .2s}
 .home-nav-link>.icon{flex:none;width:25px;height:25px;stroke-width:1.4;color:#6a7246}
 .home-nav-link:nth-child(1){--tilt:-3deg;--lift:1px}
@@ -82,14 +82,16 @@ body:not([data-page])>.topbar,body:not([data-page])>.footer{visibility:hidden}
   .home-brand{gap:6px}
   .home-logo img{width:62px;height:62px}
   .home-title{font-size:22px}
-  .home-navigation{width:100%;padding:16px max(20px,env(safe-area-inset-right)) 20px max(20px,env(safe-area-inset-left));gap:12px;scroll-padding-inline:20px}
+  .home-navigation{width:100%;padding:16px max(20px,env(safe-area-inset-right)) 20px max(20px,env(safe-area-inset-left));gap:16px 12px}
   .home-nav-link{min-height:48px;font-size:18px;padding:9px 13px;gap:7px}
   .home-nav-link>.icon{width:22px;height:22px}
   .home-message{font-size:clamp(24px,4vw,30px);padding:12px 24px max(26px,env(safe-area-inset-bottom))}
 }
-@media(max-width:400px){
-  .home-navigation{padding-inline:16px;gap:9px}
-  .home-nav-link{font-size:17px;padding-inline:12px}
+@media(max-width:620px){
+  .home-universe{min-height:780px}
+  .home-navigation{padding:16px 16px 20px;gap:14px 10px}
+  .home-nav-link{min-height:46px;font-size:16px;padding:8px 10px;gap:6px}
+  .home-nav-link>.icon{width:20px;height:20px}
   .home-message{font-size:24px;padding-inline:20px}
 }
 @media(max-height:550px) and (min-width:621px){
