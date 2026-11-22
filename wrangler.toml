@@ -1,0 +1,25 @@
+# Cloudflare Worker backend for LongEar Diaries.
+# The static site itself is served by GitHub Pages; this worker is attached
+# to the /api/* and /uploads/* routes of the site domain so the editorial
+# office runs same-origin (cookies, no CORS).
+
+name = "longear-backend"
+main = "worker/main.js"
+compatibility_date = "2026-11-01"
+
+routes = [
+  { pattern = "longeardiaries.com/api/*", zone_name = "longeardiaries.com" },
+  { pattern = "longeardiaries.com/uploads/*", zone_name = "longeardiaries.com" },
+  { pattern = "www.longeardiaries.com/api/*", zone_name = "longeardiaries.com" },
+  { pattern = "www.longeardiaries.com/uploads/*", zone_name = "longeardiaries.com" },
+]
+
+# Fill in the real IDs after `wrangler d1 create` / `wrangler kv namespace create`.
+[[d1_databases]]
+binding = "DB"
+database_name = "longear-db"
+database_id = "TO_BE_FILLED"
+
+[[kv_namespaces]]
+binding = "UPLOADS"
+id = "TO_BE_FILLED"

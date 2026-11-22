@@ -283,7 +283,7 @@
     {
       "id": "demo-editor",
       "name": "Demo Editor",
-      "email": "demo@longeardiaries.test",
+      "email": "editor@example.com",
       "role": "admin",
       "title": "Demo workspace editor",
       "bio": "A public front-end demonstration account.",

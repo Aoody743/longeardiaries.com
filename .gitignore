@@ -43,3 +43,6 @@ yarn-error.log*
 
 # OS metadata
 .DS_Store
+
+# Cloudflare backend tooling (generated locally, never published)
+/cloud/

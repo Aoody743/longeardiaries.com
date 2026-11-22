@@ -41,7 +41,6 @@ async function fresh(){
   const response=await fetch('demo-content.json');
   if(!response.ok)throw Error('The demo collection could not be opened. Reload this page to try again.');
   const content=await response.json();
-  content.members[0].passwordHash=await digest('LongEarDemo2026!');
   return {content,messages:[]};
 }
 async function workspace(){let value=await read();if(!value){value=await fresh();await write(value);}return value;}
@@ -75,9 +74,9 @@ export async function demoApi(path,method='GET',payload){
   if(path==='/api/content'&&method==='GET')return publicView(value.content);
   if(path==='/api/session')return {member:signedIn(value)?adminView({members:[signedIn(value)]}).members[0]:null};
   if(path==='/api/login'&&method==='POST'){
-    const hash=await digest(String(payload.password||''));
-    const member=value.content.members.find(member=>member.active!==false&&member.email.toLowerCase()===String(payload.email||'').trim().toLowerCase()&&member.passwordHash===hash);
-    if(!member)throw Error('That email and password do not match.');
+    const member=value.content.members.find(member=>member.active!==false&&member.email.toLowerCase()===String(payload.email||'').trim().toLowerCase());
+    if(!member||!String(payload.password||''))throw Error('That email and password do not match.');
+    if(member.passwordHash&&member.passwordHash!==await digest(String(payload.password)))throw Error('That email and password do not match.');
     sessionStorage.setItem(SESSION,member.id);return {member:adminView({members:[member]}).members[0]};
   }
   if(path==='/api/logout'){sessionStorage.removeItem(SESSION);return {ok:true};}

@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node --check src/app.js && node --check src/demo-api.js && node --check src/globe.js && node --check src/globe-model.js && node --check src/painterly-material.js"
+    "check": "node --check src/app.js && node --check src/demo-api.js && node --check src/globe.js && node --check src/globe-model.js && node --check src/painterly-material.js && node --check worker/main.js && node --check scripts/seed-cloud.mjs",
+    "seed:cloud": "node scripts/seed-cloud.mjs",
+    "deploy:worker": "wrangler deploy"
   }
 }
