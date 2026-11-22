@@ -14,12 +14,11 @@ routes = [
   { pattern = "www.longeardiaries.com/uploads/*", zone_name = "longeardiaries.com" },
 ]
 
-# Fill in the real IDs after `wrangler d1 create` / `wrangler kv namespace create`.
 [[d1_databases]]
 binding = "DB"
 database_name = "longear-db"
-database_id = "TO_BE_FILLED"
+database_id = "385ed5ba-a7ba-4d43-ba01-b9348e9997ad"
 
 [[kv_namespaces]]
 binding = "UPLOADS"
-id = "TO_BE_FILLED"
+id = "791df824c59e414b94be03b70059c52b"
