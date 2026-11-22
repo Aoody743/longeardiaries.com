@@ -1,83 +1,63 @@
-# LongEar Diaries — longeardiaries.com
+# LongEar Diaries · longeardiaries.com
 
-Interactive storybook site for endangered wildlife: a hand-painted 3D Earth
-with clickable animal markers, field diaries, events, volunteer stories and a
-real editorial office (admin) running on Cloudflare's free tier.
+A storybook corner of the internet for endangered species — the small, quiet
+animals that rarely make the conservation headlines.
 
-## Live
+## What it is
 
-- **Production** — `https://longeardiaries.com` · static site served by GitHub
-  Pages, backend API served by a Cloudflare Worker on the same domain.
-- **Preview sandbox** — `https://aoody743.github.io/longeardiaries.com/` ·
-  front-end only. Content lives in your browser's IndexedDB and the editorial
-  office accepts any email + password (nothing leaves the browser, nothing is
-  published).
+Open the site and you arrive under a painted sunset sky. A soft watercolor
+Earth turns slowly in front of you: drag it, and the animals are standing in
+their real homes — the long-eared jerboa in the Gobi Desert, the saiga on the
+Kazakhstan steppe, the kakapo in a New Zealand forest. Tap one and its field
+diary opens, chapter by chapter.
 
-## Architecture
+Around the globe you will find species diaries to browse by habitat,
+conservation events to join, volunteer stories from the field, the team
+behind the project, our story, our partners, and a little postcard form to
+write to us.
 
-- **Static SPA** — vanilla ES modules with vendored three.js, hash routing,
-  no framework. `npm run build` copies `src/` → `dist/`.
-- **Backend** — `worker/main.js`, a Cloudflare Worker attached to the
-  `longeardiaries.com/api/*` and `/uploads/*` routes so the editorial office
-  runs same-origin (no CORS, `SameSite=Strict` cookies):
-  - **D1** (`longear-db`) — content + mailbox collections, revision-checked
-    saves, capped snapshot history (last 60 versions).
-  - **KV** (`UPLOADS`) — images uploaded through the editorial office.
-  - **Auth** — PBKDF2-SHA256 password hashes, HMAC-signed `HttpOnly` session
-    cookies (12 h), same-origin enforcement on writes.
-- **CI** — GitHub Actions (`.github/workflows/deploy.yml`) builds `dist` and
-  publishes it to GitHub Pages on every push to `main`.
-- **DNS** — the `longeardiaries.com` zone lives on Cloudflare: apex and `www`
-  are proxied CNAMEs to `Aoody743.github.io`, a
-  `_github-pages-challenge-Aoody743` TXT verifies the Pages domain, and
-  SSL/TLS mode is Full (strict).
+## The look
+
+The whole site is drawn like a vintage explorer's journal: warm cream paper,
+hand-inked borders and postage stamps, slightly tilted polaroid cards, pastel
+navigation pills, coral-red buttons, and gentle hand-drawn touches everywhere.
+The big titles are set in Cormorant Garamond and the text in Nunito Sans —
+both bundled with the site, so it reads the same everywhere, even offline.
 
 ## Editorial office
 
-Sign in at `/#admin` on the production domain. The admin account is created
-by the seed script — passwords are stored only as PBKDF2 hashes inside D1 and
-never appear in this repository.
+The people behind the diaries run everything through the editorial office:
 
-First-time setup (one-time, run locally where the parent LongEar project
-lives):
+**https://longeardiaries.com/#admin**
 
-```sh
-npx wrangler login
-npx wrangler d1 create longear-db          # put the id into wrangler.toml
-npx wrangler kv namespace create UPLOADS   # put the id into wrangler.toml
-ADMIN_PASSWORD='choose-a-long-password' npm run seed:cloud
-npx wrangler d1 execute longear-db --remote --file cloud/seed.sql
-npm run deploy:worker                      # attaches the /api/* + /uploads/* routes
-```
+Sign in there to write and publish diary chapters, place new species on the
+globe, upload photos (including the team group photo), manage events, the
+team page and partners, and read messages from the contact, RSVP and story
+forms.
 
-`ADMIN_PASSWORD` is optional — when omitted the script generates a strong
-password and prints it once. `cloud/` is git-ignored.
+Sign-in credentials are private to the site owners: they live only as salted
+hashes inside the site's database and are never written in this repository.
 
-Rotate the admin password at any time (content is untouched):
+---
 
-```sh
-ADMIN_PASSWORD='new-password' npm run seed:cloud -- --rotate
-npx wrangler d1 execute longear-db --remote --file cloud/seed.sql
-```
+## 中文简介
 
-## Local development
+**LongEar Diaries** 是一个绘本风格的濒危物种小站，写给那些安静、上不了新闻
+头条的小动物们。
 
-From the repository parent (full Python backend: SQLite, version history,
-local `.eml` outbox, optional SMTP):
+打开网站是一张晚霞天空下手绘的水彩地球：拖动它，动物们就站在真实的家园里
+——戈壁滩上的长耳跳鼠、草原上的高鼻羚羊、新西兰森林里的鸮鹦鹉。点开一只动
+物，就能一页一页读它的野外日记。
 
-```sh
-./run.sh    # http://127.0.0.1:4173
-```
+地球周围还有：按栖息地浏览的物种日记、可以报名的保护活动、来自一线的志愿
+者故事、团队介绍、我们的故事、合作伙伴，以及一张给我们写信的小明信片。
 
-`node scripts/prepare-sites.mjs` (run from the parent) refreshes `src/` from
-the local app and writes a sanitized `demo-content.json` for the browser
-sandbox. Local databases, password hashes, inboxes and history never leave
-the machine.
+整站长得像一本复古探险手账：奶油纸张底色、手绘边框和邮票、微微倾斜的拍立
+得卡片、马卡龙色的导航药丸、珊瑚红的按钮。大标题用 Cormorant Garamond，
+正文用 Nunito Sans，都打包在网站里，离线也一个样。
 
-## Notes
+**编辑后台**：https://longeardiaries.com/#admin —— 在那里可以写日记、把新
+物种放上地球、上传照片（包括团队合照）、管理活动和团队、查看访客留言。
 
-- The edge backend stores contact, RSVP and story submissions in the
-  editorial inbox; it does not send email.
-- Fonts (Cormorant Garamond, Nunito Sans, DM Mono) are bundled locally under
-  their SIL Open Font License; three.js, marked and DOMPurify are vendored
-  with their licenses under `src/vendor/licenses/`.
+后台账号密码由站长私下保管，只以加盐哈希的形式存在站点数据库里，不写入
+本仓库。
