@@ -21,7 +21,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.btn:hover{transform:none}}
 /* Readability refinements after the desktop review. */
 @media(min-width:981px){.main-nav a{font-size:12px}.header-cta{font-size:12px}.hero-copy>.eyebrow{font-size:10px}.world-coordinate{font-size:9px}.world-spin{font-size:10px}.world-hint{font-size:9px}.neighbour span{font-size:11px}.neighbour-label{font-size:9px}.selected-label{font-size:9px}.selected-note>.text-link{font-size:11px}.selected-note>p{font-size:12px}.selected-animal span{font-size:9px}.section-head .eyebrow{font-size:11px}.species-card .meta-line>.eyebrow{font-size:10px}.species-card .meta-line>span:not(.eyebrow){font-size:11px}.card-foot{font-size:11px}.card-foot a{font-size:12px}}
-.planet-marker[data-species="jerboa"] .marker-caption{opacity:1;transform:none}
+
 @media(min-width:761px){.modal.wide .editor-footer{position:sticky;bottom:-30px;margin-left:-1px;margin-right:-1px;padding:18px 0;background:var(--paper-light);box-shadow:0 -10px 20px var(--paper-light);z-index:10}}
 /* Keep small editorial copy readable against the cream stock. */
 :root{--muted:#69745f}

@@ -21,7 +21,30 @@
     <button class="menu-toggle icon-button" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </header>
   <main id="main-content" tabindex="-1"><div id="app"><div class="loading-page">Opening the field journal…</div></div></main>
-  <footer class="footer simple-footer"><a href="#home" aria-label="LongEar Diaries home"><img src="assets/logo-reference.jpg" alt="LongEar Diaries"></a><p>© 2026 LongEar Diaries.</p></footer>
+  <footer class="footer simple-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" aria-label="LongEar Diaries home"><img src="assets/logo-reference.jpg" alt="LongEar Diaries"></a>
+        <strong>LongEar Diaries</strong>
+        <p>Field diaries, painted maps and community stories for the species that need them most.</p>
+      </div>
+      <nav class="footer-column" aria-label="Explore">
+        <p class="footer-label">Explore</p>
+        <a href="#home">Home Globe</a>
+        <a href="#species">Species Diaries</a>
+        <a href="#volunteer">Volunteer Stories</a>
+        <a href="#events">Events &amp; Webinars</a>
+      </nav>
+      <nav class="footer-column" aria-label="Organization">
+        <p class="footer-label">Organization</p>
+        <a href="#team">Our Team</a>
+        <a href="#about">About Us</a>
+        <a href="#partner">Partner</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+    <div class="footer-copyright"><p>© 2026 LongEar Diaries. All rights reserved.</p></div>
+  </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>window.LONGEAR_HOSTED_DEMO=true;</script>
   <script type="module" src="app.js"></script>

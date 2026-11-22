@@ -13,25 +13,11 @@
   src: url(assets/fonts/local-1.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Fraunces';
+  font-family: 'Cormorant Garamond';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300 700;
   font-display: swap;
-  src: url(assets/fonts/local-2.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fraunces';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(assets/fonts/local-3.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Fraunces';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(assets/fonts/local-4.ttf) format('truetype');
+  src: url(assets/fonts/cormorant-garamond.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Nunito Sans';

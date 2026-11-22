@@ -22,25 +22,30 @@ export function createPublicPages(ctx) {
       <header class="home-header">
         <div class="home-brand">
           <a class="home-logo" href="#home" aria-label="LongEar Diaries home">${image('assets/logo-reference.jpg', '', '', true)}</a>
-          <h1 class="home-title">LongEar Diaries</h1>
+          <p class="home-title">LongEar Diaries</p>
         </div>
         <nav class="home-navigation" aria-label="Explore LongEar Diaries">
           ${destinations.map(([id, name, symbol, color]) => `<a class="home-nav-link tone-${color}" href="#${id}">${icon(symbol)}<span>${name}</span></a>`).join('')}
         </nav>
       </header>
-      <div class="home-world">
-        <div class="world-stage solar-globe" id="worldStage">
-          <div class="planet-canvas"><div class="world-loading" role="status"><span></span><span class="visually-hidden">Loading Earth</span></div></div>
-          <div class="planet-markers"></div>
-          <div class="world-controls home-world-controls" hidden>
-            <button class="icon-button world-spin" data-world="spin" aria-label="Pause globe rotation" aria-pressed="false">${icon('pause')}</button>
-            <button class="icon-button" data-world="out" aria-label="Zoom out">−</button>
-            <button class="icon-button" data-world="in" aria-label="Zoom in">+</button>
-            <button class="icon-button" data-world="reset" aria-label="Reset globe view">${icon('rotate')}</button>
+      <div class="home-hero">
+        <div class="home-intro">
+          <h1 class="home-slogan">Every species deserves a chance to survive</h1>
+          <div class="home-actions"><a class="btn btn-primary" href="#species">Explore the Globe ${icon('globe')}</a><a class="btn btn-primary" href="#about">Read Our Story ${icon('book')}</a></div>
+        </div>
+        <div class="home-world">
+          <div class="world-stage solar-globe" id="worldStage">
+            <div class="planet-canvas"><div class="world-loading" role="status"><span></span><span class="visually-hidden">Loading Earth</span></div></div>
+            <div class="planet-markers"></div>
+            <div class="world-controls home-world-controls" hidden>
+              <button class="icon-button world-spin" data-world="spin" aria-label="Pause globe rotation" aria-pressed="false">${icon('pause')}</button>
+              <button class="icon-button" data-world="out" aria-label="Zoom out">−</button>
+              <button class="icon-button" data-world="in" aria-label="Zoom in">+</button>
+              <button class="icon-button" data-world="reset" aria-label="Reset globe view">${icon('rotate')}</button>
+            </div>
           </div>
         </div>
       </div>
-      <p class="home-message">Every species deserves a chance to survive</p>
     </section>`;
   }
 
@@ -93,7 +98,8 @@ export function createPublicPages(ctx) {
 
   function team() {
     const people = (state.team || []).filter(p => p.public !== false && !p.archived).slice().sort((a, b) => (+a.order || 0) - (+b.order || 0));
-    return `<section class="page-shell team-page"><div class="team-page-title">${badge('Founders & Researchers')}<h1>${e(copy.team.title)}</h1><p>${e(copy.team.intro)}</p></div><div class="explorer-roster">${people.map((person, i) => `<article class="explorer-card"><div class="explorer-portrait tone-${['sage', 'peach', 'lilac'][i % 3]}">${person.image ? image(person.image, person.name) : portrait(i)}<span class="explorer-pin" aria-hidden="true">${icon(['leaf', 'globe', 'book'][i % 3])}</span></div><div class="explorer-info"><h2>${e(person.name)}</h2><p class="explorer-role">${e(person.title)}</p><p>${e(person.bio)}</p>${demo(person)}</div></article>`).join('')}</div></section>`;
+    const groupPhoto = state.settings?.teamPhoto ? `<figure class="team-group-photo">${image(state.settings.teamPhoto, 'The LongEar Diaries expedition team')}<figcaption>The whole expedition crew</figcaption></figure>` : '';
+    return `<section class="page-shell team-page"><div class="team-page-title">${badge('Founders & Researchers')}<h1>${e(copy.team.title)}</h1><p>${e(copy.team.intro)}</p></div><div class="explorer-roster">${people.map((person, i) => `<article class="explorer-card"><div class="explorer-id"><div class="explorer-portrait tone-${['sage', 'peach', 'lilac'][i % 3]}">${person.image ? image(person.image, person.name) : portrait(i)}<span class="explorer-pin" aria-hidden="true">${icon(['leaf', 'globe', 'book'][i % 3])}</span></div><h2>${e(person.name)}</h2></div><div class="explorer-info"><p class="explorer-role">${e(person.title)}</p><p>${e(person.bio)}</p>${demo(person)}</div></article>`).join('')}</div>${groupPhoto}</section>`;
   }
 
   function portrait(index) {
@@ -103,7 +109,17 @@ export function createPublicPages(ctx) {
   }
 
   function about() {
-    return `<section class="page-shell about-page"><header class="about-title">${badge('Our Mission & Origins')}<h1>${e(copy.about.title)}</h1></header><div class="open-journal"><div class="journal-leaf journal-left"><span class="journal-corner" aria-hidden="true">${icon('leaf')}</span><p class="opening-paragraph">${e(copy.about.paragraphs[0])}</p><span class="journal-folio" aria-hidden="true">01</span></div><div class="journal-leaf journal-right"><p>${e(copy.about.paragraphs[1])}</p><span class="journal-folio" aria-hidden="true">02</span></div></div><div class="research-principles">${copy.about.principles.map((p, i) => `<article>${icon(i ? 'book' : 'leaf')}<div><h2>${e(p.title)}</h2><p>${e(p.body)}</p></div></article>`).join('')}</div><div class="comic-shelf"><figure>${image('assets/storybook/new-friend-1.png', "LongEar's New Friend 1 comic cover")}<figcaption>LongEar’s New Friend 1</figcaption></figure><figure>${image('assets/storybook/new-friend-2.png', "LongEar's New Friend 2 comic cover")}<figcaption>LongEar’s New Friend 2</figcaption></figure></div></section>`;
+    const principles = copy.about.principles.map((p, i) => `<article>${icon(i ? 'book' : 'leaf')}<div><h3>${e(p.title)}</h3><p>${e(p.body)}</p></div></article>`).join('');
+    const section = (num, title, body) => `<section class="about-section"><div class="about-head"><span class="about-number" aria-hidden="true">${num}</span><h2>${title}</h2></div>${body}</section>`;
+    const divider = `<div class="about-divider" aria-hidden="true">${icon('leaf')}</div>`;
+    const sections = [
+      section('01', 'Who We Are', `<div class="about-feature"><div><p class="about-lede">${e(copy.about.who)}</p></div><figure class="about-crest">${image('assets/logo-reference.jpg', 'The LongEar Diaries crest')}<figcaption>The LongEar Diaries crest</figcaption></figure></div>`),
+      section('02', 'Our Identity', `<p>${e(copy.about.identity)}</p><div class="comic-shelf"><figure>${image('assets/storybook/new-friend-1.png', "LongEar's New Friend 1 comic cover")}<figcaption>LongEar’s New Friend 1</figcaption></figure><figure>${image('assets/storybook/new-friend-2.png', "LongEar's New Friend 2 comic cover")}<figcaption>LongEar’s New Friend 2</figcaption></figure></div>`),
+      section('03', 'How We Write These Diaries', `<p>${e(copy.about.how)}</p><div class="about-principles">${principles}</div>`),
+      section('04', 'Our Purpose', `<blockquote class="about-quote">${e(copy.about.purpose)}</blockquote>`),
+      section('05', 'Our Hope', `<p class="about-hope">${e(copy.about.hope)}</p><div class="about-hope-flourish" aria-hidden="true">${icon('leaf')}</div>`),
+    ];
+    return `<section class="page-shell about-page"><header class="about-title">${badge('Our Mission & Origins')}<h1>${e(copy.about.title)}</h1></header>${sections.join(divider)}</section>`;
   }
 
   function partner() {
