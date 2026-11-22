@@ -16,27 +16,24 @@ conservation events to join, volunteer stories from the field, the team
 behind the project, our story, our partners, and a little postcard form to
 write to us.
 
-## The look
+## Design ideas
 
-The whole site is drawn like a vintage explorer's journal: warm cream paper,
-hand-inked borders and postage stamps, slightly tilted polaroid cards, pastel
-navigation pills, coral-red buttons, and gentle hand-drawn touches everywhere.
-The big titles are set in Cormorant Garamond and the text in Nunito Sans —
-both bundled with the site, so it reads the same everywhere, even offline.
-
-## Editorial office
-
-The people behind the diaries run everything through the editorial office:
-
-**https://longeardiaries.com/#admin**
-
-Sign in there to write and publish diary chapters, place new species on the
-globe, upload photos (including the team group photo), manage events, the
-team page and partners, and read messages from the contact, RSVP and story
-forms.
-
-Sign-in credentials are private to the site owners: they live only as salted
-hashes inside the site's database and are never written in this repository.
+- **A globe as home, not a map.** The Earth is a hand-built watercolor model
+  where animals literally live at their real coordinates, each with a
+  painted portrait card that opens its diary — geography becomes empathy.
+- **An explorer's journal, not a dashboard.** Cream paper, hand-inked
+  borders and postage stamps, slightly tilted polaroid cards, paper tape,
+  folio numbers and pressed-leaf flourishes make every page feel like a
+  notebook kept in the field.
+- **A calm, warm palette.** Cream paper and warm brown ink, with sage,
+  peach, lilac and butter pastels for navigation, and coral red reserved for
+  the few actions that matter.
+- **Classic meets readable.** Elegant Cormorant Garamond for the big titles,
+  friendly Nunito Sans for the body — both bundled with the site, so it
+  reads the same everywhere, even offline.
+- **Every page its own scene.** Each section sits on its own watercolor
+  backdrop — a meadow for the diaries, a woodland for the team, a greenhouse
+  for partners — while the story stays quiet and white where words lead.
 
 ---
 
@@ -47,17 +44,19 @@ hashes inside the site's database and are never written in this repository.
 
 打开网站是一张晚霞天空下手绘的水彩地球：拖动它，动物们就站在真实的家园里
 ——戈壁滩上的长耳跳鼠、草原上的高鼻羚羊、新西兰森林里的鸮鹦鹉。点开一只动
-物，就能一页一页读它的野外日记。
+物，就能一页一页读它的野外日记。地球周围还有：按栖息地浏览的物种日记、可
+以报名的保护活动、来自一线的志愿者故事、团队介绍、我们的故事、合作伙伴，
+以及一张给我们写信的小明信片。
 
-地球周围还有：按栖息地浏览的物种日记、可以报名的保护活动、来自一线的志愿
-者故事、团队介绍、我们的故事、合作伙伴，以及一张给我们写信的小明信片。
+**设计思路**
 
-整站长得像一本复古探险手账：奶油纸张底色、手绘边框和邮票、微微倾斜的拍立
-得卡片、马卡龙色的导航药丸、珊瑚红的按钮。大标题用 Cormorant Garamond，
-正文用 Nunito Sans，都打包在网站里，离线也一个样。
-
-**编辑后台**：https://longeardiaries.com/#admin —— 在那里可以写日记、把新
-物种放上地球、上传照片（包括团队合照）、管理活动和团队、查看访客留言。
-
-后台账号密码由站长私下保管，只以加盐哈希的形式存在站点数据库里，不写入
-本仓库。
+- **地球是家，不是地图。** 地球是手工搭建的水彩模型，动物以 3D 小模型立在
+  真实坐标上，悬停弹出带插画的拍立得卡片——让地理位置变成情感连接。
+- **像探险手账，不像管理后台。** 奶油纸张、手绘边框与邮票、微微倾斜的拍立
+  得卡片、纸胶带、页码与压花叶子，让每一页都像在野外记下的笔记。
+- **安静温暖的色板。** 奶油纸底色配暖棕墨色，导航用鼠尾草绿、蜜桃、丁香、
+  奶油黄的淡彩点缀，珊瑚红只留给最重要的那几个动作。
+- **古典与易读并存。** 大标题用优雅的 Cormorant Garamond，正文用亲切的
+  Nunito Sans，字体全部打包在站点里，离线也一个样。
+- **每页自有场景。** 每个子页面都有自己的水彩背景——日记是草地、团队是树
+  林、伙伴是温室；而以文字为主的地方（比如我们的故事）则保持纯白的安静。
